@@ -107,6 +107,12 @@ function is_apt_package_installed() {
   apt list --quiet --quiet --installed "${package}" 2>/dev/null | grep --quiet .
 }
 
+function is_snap_package_installed() {
+  local package_name="$1"
+  snap list | grep -q "^$package_name "
+  return $?
+}
+
 function not_during_test() {
   if [[ "${DOTFILES_TEST:-}" == "true" ]]; then
     log_info "Skipping '${*}' because we are in test mode"
@@ -124,7 +130,6 @@ function service_exists() {
     return 1
   fi
 }
-
 
 function gsettings_ensure() {
   local schema="$1"
