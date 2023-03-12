@@ -1,4 +1,4 @@
-alias kuflow-docker="docker-compose up -d db fusionauth temporal minio fake-smtp-server dockerhost"
+alias kuflow-docker="docker compose up -d db fusionauth temporal minio fake-smtp-server dockerhost"
 alias kuflow-vpn-live-up="wg-quick up eu-01a"
 alias kuflow-vpn-live-down="wg-quick down eu-01a"
 alias kuflow-vpn-sandbox-up="wg-quick up sandbox-01"
