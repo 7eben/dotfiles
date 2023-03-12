@@ -1,0 +1,15 @@
+# Common shell initialization file for all your shells; use .profile
+# https://stackoverflow.com/questions/764600/how-can-you-export-your-bashrc-to-zshrc
+####################################################################
+
+if [ -d "${HOME}/go/bin" ]; then
+  export PATH="${HOME}/go/bin:${PATH}"
+fi
+
+if [ -d "${HOME}/bin" ]; then
+  export PATH="${HOME}/bin:${PATH}"
+fi
+
+if [ -d "${HOME}/.local/bin" ]; then
+  export PATH="${HOME}/.local/bin:${PATH}"
+fi

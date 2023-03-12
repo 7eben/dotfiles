@@ -1,0 +1,40 @@
+#!/bin/zsh
+
+# {{ template "scripts-library" }}
+
+# The following line is for ShellCheck to correctly identify the above included library
+true || source ../.chezmoitemplates/scripts-library
+
+readonly wanted_plugins=(
+  # https://github.com/sudermanjr/asdf-argo.git
+  argo
+  # https://github.com/beardix/asdf-argocd.git
+  argocd
+  # https://github.com/kennyp/asdf-golang.git
+  golang
+  # https://github.com/Antiarchitect/asdf-helm.git
+  helm
+  # https://github.com/halcyon/asdf-java.git
+  java
+  # https://github.com/asdf-community/asdf-kubectl.git
+  kubectl
+  # https://github.com/Banno/asdf-kustomize.git
+  kustomize
+  # https://github.com/penpyt/asdf-mc.git
+  mc
+  # https://github.com/asdf-vm/asdf-nodejs.git
+  nodejs
+  # https://github.com/asdf-community/asdf-python.git
+  python
+)
+missing_plugins=()
+
+asdf_dir="${HOME}/.asdf"
+
+for plugin in "${wanted_plugins[@]}"; do
+  if [[ ! -d "${asdf_dir}/plugins/${plugin}" ]]; then
+    log_task "Adding asdf pluing ${plugin}"
+
+    "${asdf_dir}"/bin/asdf plugin add "${plugin}"
+  fi
+done
