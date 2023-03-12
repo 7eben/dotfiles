@@ -31,4 +31,9 @@
     command: gpg
     args: ["--dearmor"]
 
+"usr/bin/docker-credential-secretservice":
+  type: file
+  url: "https://github.com/docker/docker-credential-helpers/releases/download/v{{ template "get-github-latest-version" list "docker/docker-credential-helpers" $cache }}/docker-credential-secretservice-v{{ template "get-github-latest-version" list "docker/docker-credential-helpers" $cache }}.linux-{{ .chezmoi.arch }}"
+  executable: true
+
 {{ template "save-versions-and-revisions-cache" $cache -}}
