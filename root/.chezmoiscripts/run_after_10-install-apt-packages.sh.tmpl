@@ -6,7 +6,6 @@
 true || source ../.chezmoitemplates/scripts-library
 
 readonly wanted_packages=(
-  apt-transport-https
   # net-tools
   # build-essential
   # libssl-dev
@@ -16,7 +15,6 @@ readonly wanted_packages=(
   # libsqlite3-dev
   # curl
   # httpie
-  # jq
   # libncursesw5-dev
   # xz-utils
   # tk-dev
@@ -24,19 +22,16 @@ readonly wanted_packages=(
   # libxmlsec1-dev
   # libffi-dev
   # liblzma-dev
-  # terminator
-  # 1password
-  # 1password-cli
-  # wireguard
+  apt-transport-https
   docker-ce
   docker-ce-cli
   containerd.io
   docker-buildx-plugin
   docker-compose-plugin
   google-chrome-stable
-  # sublime-text
-  # spotify-client
+  jq
   vim
+  wireguard
 )
 missing_packages=()
 

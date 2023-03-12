@@ -12,8 +12,12 @@ function is_snap_package_installed() {
 }
 
 readonly -A wanted_packages=(
+  # Format: ["${SNAP_PKG}"] = "${OPTIONS}"
   ["code"]="--classic"
   ["discord"]=""
+  ["sublime-text"]="--classic"
+  ["spotify"]=""
+
 )
 declare -A missing_packages=()
 
