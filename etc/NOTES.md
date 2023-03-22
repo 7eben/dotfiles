@@ -33,7 +33,17 @@ Manual software
 	sudo apt-get update --fix-missing
     sudo apt-get install -f
 
+> Global prettier java for watcher plugins (nodejs installed with asdf)
+  npm install -g prettier prettier-plugin-java --save-dev
 
 Customizations
 ===================
  Setting > Power > Show Battery Percent
+
+
+Terminal
+===================
+
+- Create profile
+- Change color
+- Change Custom Font: FiraCode Nerd Font Mono
