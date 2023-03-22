@@ -14,10 +14,13 @@ function is_snap_package_installed() {
 readonly -A wanted_packages=(
   # Format: ["${SNAP_PKG}"] = "${OPTIONS}"
   ["code"]="--classic"
+  ["dbeaver-ce"]=""
   ["discord"]=""
-  ["sublime-text"]="--classic"
+  ["postman"]=""
+  ["remmina"]=""
   ["spotify"]=""
-
+  ["sublime-text"]="--classic"
+  ["xournalpp"]=""
 )
 declare -A missing_packages=()
 
