@@ -22,7 +22,7 @@ sudo apt-get autoremove
 Manual software
 ==================
 
-	Autofirma:
+> Autofirma:
 	    sudo apt install libnss3-tools
 		sudo dpkg -i /home/zeben/Downloads/AutoFirma_Linux/AutoFirma_1_7_1.deb
 
@@ -35,6 +35,11 @@ Manual software
 
 > Global prettier java for watcher plugins (nodejs installed with asdf)
   npm install -g prettier prettier-plugin-java --save-dev
+
+
+> PG client
+  Download (postgresql-client) .deb for a given version, extract and get de bin in order to set Local Client in Dbeaver
+  See: ~/apps/postgres/Readme.md
 
 Customizations
 ===================

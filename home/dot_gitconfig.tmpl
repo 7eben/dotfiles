@@ -15,7 +15,7 @@
 [alias]
   tree = log --graph --all --pretty=format:'%C(auto)%h -%d %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
   tree2 = log --graph --decorate --pretty=oneline --abbrev-commit
-  prune-branches = !git branch -vv | grep ': gone]' | awk '{print $1}' | grep -v 'master' | xargs git branch -d
+  prune-branches = !git branch -vv | grep ': gone]' | awk '{print $1}' | grep -v 'master' | xargs git branch -D
   podry = remote prune origin --dry-run
   po = remote prune origin
 
