@@ -144,3 +144,6 @@ fi
 if [[ -f "${HOME}/.p10k.zsh" ]]; then
   source "${HOME}/.p10k.zsh"
 fi
+
+# Load kubectl switcher. https://github.com/danielfoehrKn/kubeswitch
+[[ ! -f ~/.config/kubeswitch/switch.sh ]] || source ~/.config/kubeswitch/switch.sh
