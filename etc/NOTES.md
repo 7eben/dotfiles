@@ -41,6 +41,11 @@ Manual software
   Download (postgresql-client) .deb for a given version, extract and get de bin in order to set Local Client in Dbeaver
   See: ~/apps/postgres/Readme.md
 
+
+> FortiClient
+  Adde profile to path
+
+
 Customizations
 ===================
  Setting > Power > Show Battery Percent
