@@ -5,53 +5,54 @@
 # The following line is for ShellCheck to correctly identify the above included library
 true || source ../.chezmoitemplates/scripts-library
 
+# https://github.com/sudermanjr/asdf-argo.git
+# https://github.com/beardix/asdf-argocd.git
+# https://github.com/MetricMike/asdf-awscli.git
+# https://github.com/emersonsoares/asdf-dotnet-core.git
+# asdf plugin add gcloud https://github.com/jthegedus/asdf-gcloud
+# https://github.com/Antiarchitect/asdf-helm.git
+# https://github.com/asdf-community/asdf-cmctl
+# https://github.com/asdf-community/asdf-hashicorp.git
+# https://github.com/asdf-community/asdf-kubectl.git
+# https://github.com/asdf-community/asdf-poetry.git
+# https://github.com/asdf-community/asdf-python.git
+# https://github.com/asdf-vm/asdf-nodejs.git
+# https://github.com/AZMCode/asdf-jq.git
+# https://github.com/Banno/asdf-kustomize.git
+# https://github.com/FairwindsOps/asdf-pluto
+# https://github.com/halcyon/asdf-java.git
+# https://github.com/jimmidyson/asdf-krew.git
+# https://github.com/kennyp/asdf-golang.git
+# https://github.com/penpyt/asdf-mc.git
+# https://github.com/Proemion/asdf-maven.git
+# https://github.com/stefansedich/asdf-kubeseal
+# https://github.com/sudermanjr/asdf-yq.git
+# https://github.com/vixus0/asdf-bitwarden
+
 readonly wanted_plugins=(
-  # https://github.com/sudermanjr/asdf-argo.git
   argo
-  # https://github.com/beardix/asdf-argocd.git
   argocd
-  # https://github.com/MetricMike/asdf-awscli.git
   awscli
-  # https://github.com/emersonsoares/asdf-dotnet-core.git
-  dotnet-core
-  # asdf plugin add gcloud https://github.com/jthegedus/asdf-gcloud
-  gcloud
-  # https://github.com/kennyp/asdf-golang.git
-  golang
-  # https://github.com/Antiarchitect/asdf-helm.git
-  helm
-  # https://github.com/halcyon/asdf-java.git
-  java
-  # https://github.com/AZMCode/asdf-jq.git
-  jq
-  # https://github.com/asdf-community/asdf-kubectl.git
-  kubectl
-  # https://github.com/jimmidyson/asdf-krew.git
-  krew
-  # https://github.com/stefansedich/asdf-kubeseal
-  kubeseal
-  # https://github.com/Banno/asdf-kustomize.git
-  kustomize
-  # https://github.com/Proemion/asdf-maven.git
-  maven
-  # https://github.com/penpyt/asdf-mc.git
-  mc
-  # https://github.com/asdf-vm/asdf-nodejs.git
-  nodejs
-  # https://github.com/asdf-community/asdf-poetry.git
-  poetry
-  # https://github.com/asdf-community/asdf-python.git
-  python
-  # https://github.com/asdf-community/asdf-hashicorp.git
-  terraform
-  # https://github.com/sudermanjr/asdf-yq.git
-  yq
-  # https://github.com/vixus0/asdf-bitwarden
   bitwarden
-  # https://github.com/asdf-community/asdf-cmctl
   cmctl
-  # https://github.com/FairwindsOps/asdf-pluto
+  dotnet-core
+  gcloud
+  golang
+  helm
+  java
+  jq
+  krew
+  kubectl
+  kubeseal
+  kustomize
+  maven
+  mc
+  nodejs
   pluto
+  poetry
+  python
+  terraform
+  yq
 )
 missing_plugins=()
 
@@ -61,6 +62,6 @@ for plugin in "${wanted_plugins[@]}"; do
   if [[ ! -d "${asdf_dir}/plugins/${plugin}" ]]; then
     log_task "Adding asdf pluing ${plugin}"
 
-    "${asdf_dir}"/bin/asdf plugin add "${plugin}"
+    "${HOME}"/.local/bin/asdf plugin add "${plugin}"
   fi
 done
