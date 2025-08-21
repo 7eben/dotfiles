@@ -4,16 +4,6 @@ if [[ -r "${HOME}/.profile" ]]; then
   source "${HOME}/.profile"
 fi
 
-# https://github.com/romkatv/powerlevel10k#how-do-i-initialize-direnv-when-using-instant-prompt
-if (( ${+commands[direnv]} )); then
-  emulate zsh -c "$(direnv export zsh)"
-fi
-
-# https://github.com/romkatv/powerlevel10k#how-do-i-initialize-direnv-when-using-instant-prompt
-if (( ${+commands[direnv]} )); then
-  emulate zsh -c "$(direnv hook zsh)"
-fi
-
 # Load bash aliases
 if [[ -r "${HOME}/.bash_aliases" ]]; then
   # ksh is closer than sh to bash
@@ -94,29 +84,30 @@ DISABLE_MAGIC_FUNCTIONS="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   mise # Must be loaded first
+  1password
   bitwarden
+  chezmoi
   command-not-found
   common-aliases
   docker
   docker-compose
   git
   helm
+  helm
+  httpie
   kubectl
   mvn
   npm
   starship
   sudo
   switcher
+  terraform
   ubuntu
+  vault
+  web-search
   zsh-autosuggestions
   zsh-syntax-highlighting
-  # web-search
-  # chezmoi
-  # golang
-  # poetry
-  # pyenv
-  # python
-  )
+)
 
 # https://github.com/zsh-users/zsh-completions/issues/603
 fpath+="${ZSH_CUSTOM:-"${ZSH}/custom"}/plugins/zsh-completions/src"
@@ -126,4 +117,22 @@ source "${ZSH}/oh-my-zsh.sh"
 # https://github.com/microsoft/vscode/issues/153400#issue-1286534600
 if [[ "${TERM_PROGRAM}" == "vscode" ]]; then
   ITERM_SHELL_INTEGRATION_INSTALLED="Yes"
+fi
+
+# Configure 1Password plugins
+[[ ! -f ~/.config/op/plugins.sh ]] || source ~/.config/op/plugins.sh
+
+# Load custom shell
+[[ ! -f ~/.shell-env ]] || source ~/.shell-env
+
+# FZF config
+# Append this line to ~/.zshrc to enable fzf keybindings for Zsh:
+[[ ! -f /usr/share/doc/fzf/examples/key-bindings.zsh ]] || source /usr/share/doc/fzf/examples/key-bindings.zsh
+
+# Append this line to ~/.zshrc to enable fuzzy auto-completion for Zsh:
+[[ ! -f /usr/share/doc/fzf/examples/completion.zsh ]] || source /usr/share/doc/fzf/examples/completion.zsh
+
+# Load Angular CLI autocompletion.
+if (( ${+commands[ng]} )); then
+  source <(ng completion script)
 fi
