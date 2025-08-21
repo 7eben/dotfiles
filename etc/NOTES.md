@@ -33,7 +33,7 @@ Manual software
 	sudo apt-get update --fix-missing
     sudo apt-get install -f
 
-> Global prettier java for watcher plugins (nodejs installed with asdf)
+> Global prettier java for watcher plugins
   npm install -g prettier prettier-plugin-java --save-dev
 
 

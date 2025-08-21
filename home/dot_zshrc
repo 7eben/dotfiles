@@ -107,7 +107,7 @@ DISABLE_MAGIC_FUNCTIONS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  asdf
+  mise # Must be loaded first
   bitwarden
   command-not-found
   common-aliases
@@ -148,18 +148,3 @@ fi
 
 # Load kubectl switcher. https://github.com/danielfoehrKn/kubeswitch
 [[ ! -f ~/.config/kubeswitch/switch.sh ]] || source ~/.config/kubeswitch/switch.sh
-
-# JAVA: To set JAVA_HOME in your shell's initialization add the following:
-if command -v java >/dev/null 2>&1 && ! go 2>&1 | grep -q '^No version is set for command '; then
-  source ~/.asdf/plugins/java/set-java-home.zsh
-fi
-
-# .NET Core: To set DOTNET_ROOT in your shell's initialization add the following:
-if command -v dotnet >/dev/null 2>&1 && ! go 2>&1 | grep -q '^No version is set for command '; then
-  source ~/.asdf/plugins/dotnet-core/set-dotnet-home.zsh
-fi
-
-# .NET Core: To set GOROOT in your shell's initialization add the following:
-if command -v go >/dev/null 2>&1 && ! go 2>&1 | grep -q '^No version is set for command '; then
-  source ~/.asdf/plugins/golang/set-env.zsh
-fi
