@@ -1,5 +1,6 @@
 [settings]
 pin = true
+idiomatic_version_file_enable_tools = []
 
 [tools]
 bitwarden = "cli-v2025.5.0"

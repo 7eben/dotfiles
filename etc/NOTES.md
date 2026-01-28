@@ -57,3 +57,38 @@ Terminal
 - Create profile
 - Change color
 - Change Custom Font: FiraCode Nerd Font Mono
+
+GNome Extensions
+===================
+
+$gnome-extensions list
+
+  BringOutSubmenuOfPowerOffLogoutButton@pratap.fastmail.fm
+  gsconnect@andyholmes.github.io
+  impatience@gfxmonk.net
+  status-area-horizontal-spacing@mathematical.coffee.gmail.com
+  lockkeys@vaina.lt
+  apps-menu@gnome-shell-extensions.gcampax.github.com
+  auto-move-windows@gnome-shell-extensions.gcampax.github.com
+  drive-menu@gnome-shell-extensions.gcampax.github.com
+  launch-new-instance@gnome-shell-extensions.gcampax.github.com
+  native-window-placement@gnome-shell-extensions.gcampax.github.com
+  places-menu@gnome-shell-extensions.gcampax.github.com
+  screenshot-window-sizer@gnome-shell-extensions.gcampax.github.com
+  user-theme@gnome-shell-extensions.gcampax.github.com
+  window-list@gnome-shell-extensions.gcampax.github.com
+  windowsNavigator@gnome-shell-extensions.gcampax.github.com
+  workspace-indicator@gnome-shell-extensions.gcampax.github.com
+  ding@rastersoft.com
+  ubuntu-appindicators@ubuntu.com
+  ubuntu-dock@ubuntu.com
+
+
+ll ~/.local/share/gnome-shell/extensions
+
+BringOutSubmenuOfPowerOffLogoutButton@pratap.fastmail.fm
+impatience@gfxmonk.net
+lockkeys@vaina.lt_BCK
+gsconnect@andyholmes.github.io
+lockkeys@vaina.lt
+status-area-horizontal-spacing@mathematical.coffee.gmail.com

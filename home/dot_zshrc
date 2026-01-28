@@ -5,14 +5,14 @@ if [[ -r "${HOME}/.profile" ]]; then
 fi
 
 # https://github.com/romkatv/powerlevel10k#how-do-i-initialize-direnv-when-using-instant-prompt
-if (( ${+commands[direnv]} )); then
-  emulate zsh -c "$(direnv export zsh)"
-fi
+# if (( ${+commands[direnv]} )); then
+#   emulate zsh -c "$(direnv export zsh)"
+# fi
 
 # https://github.com/romkatv/powerlevel10k#how-do-i-initialize-direnv-when-using-instant-prompt
-if (( ${+commands[direnv]} )); then
-  emulate zsh -c "$(direnv hook zsh)"
-fi
+# if (( ${+commands[direnv]} )); then
+#   emulate zsh -c "$(direnv hook zsh)"
+# fi
 
 # Load bash aliases
 if [[ -r "${HOME}/.bash_aliases" ]]; then

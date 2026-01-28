@@ -52,6 +52,20 @@
     command: gpg
     args: ["--dearmor"]
 
+"usr/share/keyrings/microsoft.gpg":
+  type: file
+  url: "https://packages.microsoft.com/keys/microsoft.asc"
+  filter:
+    command: gpg
+    args: ["--dearmor"]
+
+"usr/share/keyrings/repo.fortinet.com.gpg":
+  type: file
+  url: "https://repo.fortinet.com/repo/forticlient/7.4/ubuntu22/DEB-GPG-KEY"
+  filter:
+    command: gpg
+    args: ["--dearmor"]
+
 {{ $dockerCredentialSecretServiceVersion := includeTemplate "get-github-latest-version" (list "docker/docker-credential-helpers" $cache) }}
 "usr/bin/docker-credential-secretservice":
   type: file
