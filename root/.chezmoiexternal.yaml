@@ -59,9 +59,9 @@
     command: gpg
     args: ["--dearmor"]
 
-"usr/share/keyrings/repo.fortinet.com.gpg":
+"usr/share/keyrings/bruno.gpg":
   type: file
-  url: "https://repo.fortinet.com/repo/forticlient/7.4/ubuntu22/DEB-GPG-KEY"
+  url: "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x9FA6017ECABE0266"
   filter:
     command: gpg
     args: ["--dearmor"]
